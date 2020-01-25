@@ -555,3 +555,379 @@ Processing by TopController#index as HTML
 Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 5814)
 
 
+Started GET "/" for ::1 at 2020-01-25 14:40:31 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 7108)
+
+
+Started GET "/" for ::1 at 2020-01-25 14:48:05 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 124)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: a43890611be84bf54ef0
+Version: webpack 4.41.5
+Time: 4116ms
+Built at: 2020/01/25 14:48:12
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-88de6fcb5e58b998c654.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-88de6fcb5e58b998c654.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-88de6fcb5e58b998c654.js js/application-88de6fcb5e58b998c654.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 996 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6875ms (Views: 6872.6ms | ActiveRecord: 0.0ms | Allocations: 8233)
+
+
+Started GET "/" for ::1 at 2020-01-25 14:51:21 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 26)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 5912)
+
+
+Started GET "/" for ::1 at 2020-01-25 14:53:16 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 195653280b7ad42dc152
+Version: webpack 4.41.5
+Time: 4102ms
+Built at: 2020/01/25 14:53:23
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1f3fbd862f9ed0c108a4.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-1f3fbd862f9ed0c108a4.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1f3fbd862f9ed0c108a4.js js/application-1f3fbd862f9ed0c108a4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 996 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6825ms (Views: 6823.1ms | ActiveRecord: 0.0ms | Allocations: 7025)
+
+
+Started GET "/" for ::1 at 2020-01-25 14:54:21 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 727cac4c2616779088b0
+Version: webpack 4.41.5
+Time: 2875ms
+Built at: 2020/01/25 14:54:25
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c334cb34f7d0512164e4.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-c334cb34f7d0512164e4.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c334cb34f7d0512164e4.js js/application-c334cb34f7d0512164e4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 996 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4580ms (Views: 4578.9ms | ActiveRecord: 0.0ms | Allocations: 7019)
+
+
+Started GET "/" for ::1 at 2020-01-25 14:55:06 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 1057fa0f1596c68a56e8
+Version: webpack 4.41.5
+Time: 3000ms
+Built at: 2020/01/25 14:55:11
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bb4dbe43ea95dea20560.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-bb4dbe43ea95dea20560.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bb4dbe43ea95dea20560.js js/application-bb4dbe43ea95dea20560.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4558ms (Views: 4556.6ms | ActiveRecord: 0.0ms | Allocations: 7020)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:02:19 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 129)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 8ce31695de332963505f
+Version: webpack 4.41.5
+Time: 3345ms
+Built at: 2020/01/25 15:02:24
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b057c0381fa27971678a.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-b057c0381fa27971678a.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b057c0381fa27971678a.js js/application-b057c0381fa27971678a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5364ms (Views: 5362.6ms | ActiveRecord: 0.0ms | Allocations: 8240)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:04:03 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 5890)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:05:12 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: cbfd0829b30b5bc0c9c2
+Version: webpack 4.41.5
+Time: 3830ms
+Built at: 2020/01/25 15:05:19
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-44736baa5ca822b4ae5c.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-44736baa5ca822b4ae5c.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-44736baa5ca822b4ae5c.js js/application-44736baa5ca822b4ae5c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6477ms (Views: 6475.8ms | ActiveRecord: 0.0ms | Allocations: 7030)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:05:33 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 86de3c0e9bb6e5e10246
+Version: webpack 4.41.5
+Time: 3002ms
+Built at: 2020/01/25 15:05:38
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d17740e4f0deb56f6245.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-d17740e4f0deb56f6245.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d17740e4f0deb56f6245.js js/application-d17740e4f0deb56f6245.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4777ms (Views: 4776.0ms | ActiveRecord: 0.0ms | Allocations: 7023)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:06:26 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 649cd727f771ddb0d821
+Version: webpack 4.41.5
+Time: 3509ms
+Built at: 2020/01/25 15:06:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1135d9f0430c525ba273.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-1135d9f0430c525ba273.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1135d9f0430c525ba273.js js/application-1135d9f0430c525ba273.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4982ms (Views: 4981.3ms | ActiveRecord: 0.0ms | Allocations: 7020)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:08:15 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: b4a2285418b37effbb88
+Version: webpack 4.41.5
+Time: 3431ms
+Built at: 2020/01/25 15:08:19
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4f4b57238de5775d015c.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-4f4b57238de5775d015c.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4f4b57238de5775d015c.js js/application-4f4b57238de5775d015c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 997 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4884ms (Views: 4882.8ms | ActiveRecord: 0.0ms | Allocations: 7012)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:10:54 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 19e2db6831ba49930dc2
+Version: webpack 4.41.5
+Time: 4189ms
+Built at: 2020/01/25 15:11:01
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-473f974814cb2bd2e377.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-473f974814cb2bd2e377.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-473f974814cb2bd2e377.js js/application-473f974814cb2bd2e377.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 998 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6489ms (Views: 6485.5ms | ActiveRecord: 0.0ms | Allocations: 7025)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:13:17 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 77e824f61994aeefad51
+Version: webpack 4.41.5
+Time: 2180ms
+Built at: 2020/01/25 15:13:22
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9493b8f7011d8f596ef7.js   1.81 MiB  application  [emitted] [immutable]  application
+js/application-9493b8f7011d8f596ef7.js.map   1.95 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9493b8f7011d8f596ef7.js js/application-9493b8f7011d8f596ef7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 305 bytes {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 11 hidden modules
+
+ERROR in ./app/javascript/src/application.scss (./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+
+$background_theme= #007bff;
+^
+      Expected ':' after $background-theme in assignment statement
+      in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/app/javascript/src/application.scss (line 4, column 1)
+ @ ./app/javascript/src/application.scss 2:26-228
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5089ms (Views: 5082.2ms | ActiveRecord: 0.0ms | Allocations: 6947)
+
+
+Started GET "/" for ::1 at 2020-01-25 15:14:04 +0900
+Processing by TopController#index as HTML
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 220f260c6b30938a1bcf
+Version: webpack 4.41.5
+Time: 3865ms
+Built at: 2020/01/25 15:14:10
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2d28e6085f526e5c81d6.js   2.78 MiB  application  [emitted] [immutable]  application
+js/application-2d28e6085f526e5c81d6.js.map   2.98 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2d28e6085f526e5c81d6.js js/application-2d28e6085f526e5c81d6.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 998 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6374ms (Views: 6371.7ms | ActiveRecord: 0.0ms | Allocations: 7030)
+
+
