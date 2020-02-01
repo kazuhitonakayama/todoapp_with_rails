@@ -3100,3 +3100,154 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 7601)
 
 
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_in" for ::1 at 2020-02-01 10:08:59 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.4ms | Allocations: 545)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.7ms | Allocations: 2162)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 203ms (Views: 162.9ms | ActiveRecord: 0.0ms | Allocations: 10115)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-02-01 10:09:06 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 96)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___583272963846662739_70295034163060 at /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/app/views/devise/registrations/new.html.erb:9)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1848)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 8776)
+
+
+Started POST "/users" for ::1 at 2020-02-01 10:09:16 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"LFB3j24hQA1gUWVqrTzYbCtyCzE3E51g0kBzAaRE/c/V8MT+Up3jtr0f0FSxhwvVE/KbcsWnA0BuPNjsqxuDGw==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"アカウントを作成"}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 86)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___583272963846662739_70295034163060 at /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/app/views/devise/registrations/new.html.erb:9)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.8ms | Allocations: 657)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2259)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 291ms (Views: 259.6ms | ActiveRecord: 0.0ms | Allocations: 11653)
+
+
+Started GET "/users" for ::1 at 2020-02-01 10:12:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-02-01 10:12:32 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 205)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 489)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2567)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 10474)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-02-01 10:12:56 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 205)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 489)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2565)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 10458)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-02-01 10:12:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.0ms | Allocations: 8589)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-02-01 10:13:00 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1303)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 7573)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-02-01 10:13:02 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms | Allocations: 7579)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-02-01 10:13:20 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"T5LEjNUCykbWEMOYJk52yujdEY47WR+zkFw6IaYQa1blR563e0vHykZ+90ZquQ9jTRNc0JgZrv1UJ3cL3SFFYA==", "user"=>{"name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 2.2ms | Allocations: 3799)
+
+
+Started GET "/" for ::1 at 2020-02-01 10:13:20 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.7ms | Allocations: 331)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.2ms | Allocations: 8698)
+
+
