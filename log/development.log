@@ -4557,3 +4557,509 @@ Processing by TopController#index as HTML
 Completed 200 OK in 31ms (Views: 24.1ms | ActiveRecord: 0.5ms | Allocations: 8511)
 
 
+Started GET "/" for ::1 at 2020-02-02 18:06:11 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1084)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 6.5ms | Allocations: 1164)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 2.0ms | Allocations: 11187)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# ==========ここから追加する_Header部分========== %>
+    <header class="header">
+      <nav class="header_nav">
+        <ul class="header_menu">
+          <%# Headerにユーザー名を表示する %>
+          <li class="header_username"><%= link_to "<%= current_user.name %>", root_path, class: "nav-link" %><%= current_user.name %>さん</li>
+          <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+          <li class="header_function-list-area">
+            <ul class="header_function-lists">
+              <li><%= link_to "リストを作成", list_new_path, class: "nav-link listNew" %></li>
+              <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+              <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+ <%# ==========ここまで追加する_Header部分終わり========== %>
+):
+1:    <%# ==========ここから追加する_Header部分========== %>
+2:        <header class="header">
+3:          <nav class="header_nav">
+4:            <ul class="header_menu">
+5:              <%# Headerにユーザー名を表示する %>
+6:              <li class="header_username"><%= link_to "<%= current_user.name %>", root_path, class: "nav-link" %><%= current_user.name %>さん</li>
+7:              <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+8:              <li class="header_function-list-area">
+9:                <ul class="header_function-lists">
+10:                  <li><%= link_to "リストを作成", list_new_path, class: "nav-link listNew" %></li>
+11:                  <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+12:                  <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+13:                </ul>
+14:              </li>
+15:            </ul>
+16:          </nav>
+17:        </header>
+18:     <%# ==========ここまで追加する_Header部分終わり========== %>
+  
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/partial/_header.html.erb:6: syntax error, unexpected '>'
+app/views/partial/_header.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/partial/_header.html.erb:7: unknown regexp option - l
+app/views/partial/_header.html.erb:8: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:9: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:10: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:12: unknown regexp option - l
+app/views/partial/_header.html.erb:13: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:14: unknown regexp option - l
+app/views/partial/_header.html.erb:15: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:16: unknown regexp options - av
+app/views/partial/_header.html.erb:17: syntax error, unexpected '<'
+app/views/partial/_header.html.erb:20: unterminated regexp meets end of file
+app/views/partial/_header.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:06:26 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1085)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 1152)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms | Allocations: 11154)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# ==========ここから追加する_Header部分========== %>
+    <header class="header">
+      <nav class="header_nav">
+        <ul class="header_menu">
+          <%# Headerにユーザー名を表示する %>
+          <li class="header_username"><%= link_to <%= current_user.name %>, root_path, class: "nav-link" %><%= current_user.name %>さん</li>
+          <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+          <li class="header_function-list-area">
+            <ul class="header_function-lists">
+              <li><%= link_to "リストを作成", list_new_path, class: "nav-link listNew" %></li>
+              <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+              <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+ <%# ==========ここまで追加する_Header部分終わり========== %>
+):
+1:    <%# ==========ここから追加する_Header部分========== %>
+2:        <header class="header">
+3:          <nav class="header_nav">
+4:            <ul class="header_menu">
+5:              <%# Headerにユーザー名を表示する %>
+6:              <li class="header_username"><%= link_to <%= current_user.name %>, root_path, class: "nav-link" %><%= current_user.name %>さん</li>
+7:              <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+8:              <li class="header_function-list-area">
+9:                <ul class="header_function-lists">
+10:                  <li><%= link_to "リストを作成", list_new_path, class: "nav-link listNew" %></li>
+11:                  <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+12:                  <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+13:                </ul>
+14:              </li>
+15:            </ul>
+16:          </nav>
+17:        </header>
+18:     <%# ==========ここまで追加する_Header部分終わり========== %>
+  
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/partial/_header.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:06:45 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.9ms | Allocations: 351)
+Completed 200 OK in 42ms (Views: 34.7ms | ActiveRecord: 0.6ms | Allocations: 10387)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:08:41 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 274.5ms | Allocations: 89930)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 2.0ms | Allocations: 99917)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fddaa71d3d0>:0x00007fddac9ded10>):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><% link_to('Show', user_path(current_user.id)) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:08:59 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 410.5ms | Allocations: 89912)
+Completed 500 Internal Server Error in 433ms (ActiveRecord: 0.4ms | Allocations: 99907)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fddaca04d58>:0x00007fddaca0dd90>):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><% link_to('Show', user_path(current_user.name)) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:10:49 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 323.0ms | Allocations: 89921)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 2.7ms | Allocations: 99915)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fddaa64a9a8>:0x00007fddaa648450>):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, user_path(current_user) %><%= current_user.name %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:12:14 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 314.7ms | Allocations: 89987)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 2.3ms | Allocations: 99981)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_registration' for #<#<Class:0x00007fdda9b52f00>:0x00007fdda9b50340>
+Did you mean?  edit_user_registration_url
+               edit_user_registration_path):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, edit_user_registration(current_user) %><%= current_user.name %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:12:27 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1088)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 267.5ms | Allocations: 89978)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.5ms | Allocations: 99977)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_registration' for #<#<Class:0x00007fdda8c8a838>:0x00007fdda8cc1ea0>
+Did you mean?  edit_user_registration_url
+               edit_user_registration_path):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, edit_user_registration(current_user) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:12:30 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 852)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 291.4ms | Allocations: 89744)
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 0.4ms | Allocations: 98099)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_registration' for #<#<Class:0x00007fdda8c8a838>:0x00007fdda82b3bc0>
+Did you mean?  edit_user_registration_url
+               edit_user_registration_path):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, edit_user_registration(current_user) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:13:40 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.4ms | Allocations: 351)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.6ms | Allocations: 10379)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:14:13 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 320.3ms | Allocations: 89922)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.7ms | Allocations: 99914)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fdda83d5b20>:0x00007fddaca7f6e8>):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, user_path(current_user) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:14:18 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.7ms | Allocations: 351)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 0.4ms | Allocations: 10384)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:18:00 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 416.1ms | Allocations: 89989)
+Completed 500 Internal Server Error in 594ms (ActiveRecord: 3.7ms | Allocations: 99982)
+
+
+  
+ActionView::Template::Error (undefined method `edit_user_registration' for #<#<Class:0x00007fddacaf6658>:0x00007fddacaf4a88>
+Did you mean?  edit_user_registration_url
+               edit_user_registration_path):
+    3:       <nav class="header_nav">
+    4:         <ul class="header_menu">
+    5:           <%# Headerにユーザー名を表示する %>
+    6:           <li class="header_username"><%= link_to current_user.name, edit_user_registration(current_user) %>さん</li>
+    7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+    8:           <li class="header_function-list-area">
+    9:             <ul class="header_function-lists">
+  
+app/views/partial/_header.html.erb:6
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2020-02-02 18:18:16 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.9ms | Allocations: 402)
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 1.5ms | Allocations: 10435)
+
+
+Started GET "/users/edit.2" for ::1 at 2020-02-02 18:18:19 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 205)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2573)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 165)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.2ms | Allocations: 11631)
+
+
+Started GET "/users/edit.2" for ::1 at 2020-02-02 18:19:05 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 205)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2466)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.7ms | Allocations: 409)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.3ms | Allocations: 12299)
+
+
+Started GET "/users/edit.2" for ::1 at 2020-02-02 18:20:28 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 205)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2466)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.4ms | Allocations: 410)
+Completed 200 OK in 87ms (Views: 81.5ms | ActiveRecord: 0.6ms | Allocations: 19680)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:20:34 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1083)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 172)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 1.9ms | Allocations: 9537)
+
+
