@@ -3820,3 +3820,529 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 48ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 7349)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLists (20200202063423)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d6cf4279f7"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_lists_on_user_id" ON "lists" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200202063423"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-02-02 17:01:23 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 205)
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 500)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2556)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 155.4ms | ActiveRecord: 0.0ms | Allocations: 26399)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-02-02 17:01:27 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 147)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1388)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 8531)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-02-02 17:01:37 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"9PFWbx18pKMtORBQVQdWiG7Ah4gIA0ctPEsGrnIo/TR9wBg10zf7h+u6TaeKBVY2hcwQ5ZDNgah8doqZozSHtQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 1.4ms | Allocations: 3917)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:01:38 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.4ms | Allocations: 374)
+Completed 200 OK in 43ms (Views: 33.7ms | ActiveRecord: 1.2ms | Allocations: 8870)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:01:48 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1214)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 105)
+Completed 200 OK in 66ms (Views: 29.2ms | ActiveRecord: 1.0ms | Allocations: 13798)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:02:22 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 102)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 0.2ms | Allocations: 8022)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:03:13 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 739.4ms | Allocations: 176038)
+Completed 500 Internal Server Error in 814ms (ActiveRecord: 0.3ms | Allocations: 185561)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_list_path' for #<#<Class:0x00007fddad0f6710>:0x00007fddad0f4e10>
+Did you mean?  list_new_path):
+     8:           <li class="header_function-list-area">
+     9:             <ul class="header_function-lists">
+    10:               <%# リストを作成するリンクは今後開発していくので、今は"#"にしておきます。 %>
+    11:               <li><%= link_to "リストを作成", new_list_path, class: "nav-link listNew" %></li>
+    12:               <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+    13:               <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+    14:             </ul>
+  
+app/views/partial/_header.html.erb:11
+app/views/layouts/application.html.erb:16
+Started GET "/list/new" for ::1 at 2020-02-02 17:04:10 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 676)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 740.0ms | Allocations: 175998)
+Completed 500 Internal Server Error in 806ms (ActiveRecord: 0.7ms | Allocations: 185529)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_list_path' for #<#<Class:0x00007fddac9fd080>:0x00007fddaca07120>
+Did you mean?  list_new_path):
+     7:           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
+     8:           <li class="header_function-list-area">
+     9:             <ul class="header_function-lists">
+    10:               <li><%= link_to "リストを作成", new_list_path, class: "nav-link listNew" %></li>
+    11:               <%# -------rails routesをコマンドで打ち、deviseにおけるログアウトの為のパスを記述する-----  %>
+    12:               <li><%= link_to "サインアウト",destroy_user_session_path, class: "nav-link",method: :delete %></li>
+    13:             </ul>
+  
+app/views/partial/_header.html.erb:10
+app/views/layouts/application.html.erb:16
+Started GET "/list/new" for ::1 at 2020-02-02 17:05:02 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 352)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 0.2ms | Allocations: 9916)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:09:07 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 3.2ms | Allocations: 354)
+Completed 200 OK in 128ms (Views: 94.2ms | ActiveRecord: 2.2ms | Allocations: 30586)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:09:11 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 759)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 128)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 1.2ms | Allocations: 9478)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:09:52 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.3ms | Allocations: 360)
+Completed 200 OK in 37ms (Views: 30.7ms | ActiveRecord: 0.8ms | Allocations: 10070)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:10:00 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:3
+  Rendered top/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.7ms | Allocations: 360)
+Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 10048)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:10:03 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:3
+  Rendered top/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 599)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.5ms | Allocations: 8266)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:10:39 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 764)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.5ms | Allocations: 365)
+Completed 200 OK in 113ms (Views: 105.5ms | ActiveRecord: 2.2ms | Allocations: 20365)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:10:57 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 599)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 120)
+Completed 200 OK in 53ms (Views: 37.8ms | ActiveRecord: 1.8ms | Allocations: 8285)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:10:59 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 115)
+Completed 200 OK in 42ms (Views: 33.3ms | ActiveRecord: 0.4ms | Allocations: 8939)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:11:02 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 599)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 0.4ms | Allocations: 8275)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:11:03 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 442)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 111)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 0.2ms | Allocations: 8029)
+
+
+Started POST "/list/create" for ::1 at 2020-02-02 17:11:19 +0900
+Processing by ListController#create as HTML
+  Parameters: {"authenticity_token"=>"Dnh1c7ksPSo7lEhwSyVjaLGuj5iicKs5t0lHVMCJKJpXCFYBHAVTP7Zw33h/g6AE1RJ9p1Qxe/9d0MtLmHxgGA==", "list"=>{"title"=>"大学の課題"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[36mList Create (2.9ms)[0m  [1m[32mINSERT INTO "lists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "大学の課題"], ["user_id", 2], ["created_at", "2020-02-02 08:11:19.604298"], ["updated_at", "2020-02-02 08:11:19.604298"]]
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 51ms (ActiveRecord: 4.4ms | Allocations: 8445)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:11:19 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 620)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 2.1ms | Allocations: 8279)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:11:23 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 442)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.2ms | Allocations: 111)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.2ms | Allocations: 8031)
+
+
+Started POST "/list/create" for ::1 at 2020-02-02 17:11:34 +0900
+Processing by ListController#create as HTML
+  Parameters: {"authenticity_token"=>"k/Gc+K5ytLP7+QStrO/vdfIEMHf0xrPtTxSlNZAZQ5nKgb+KC1vapnYdk6WYSSwZlrjCSAKHYyuljSkqyOwLGw==", "list"=>{"title"=>"Geeksalonの仕事"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[36mList Create (0.6ms)[0m  [1m[32mINSERT INTO "lists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Geeksalonの仕事"], ["user_id", 2], ["created_at", "2020-02-02 08:11:34.699130"], ["updated_at", "2020-02-02 08:11:34.699130"]]
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 5.2ms | Allocations: 3879)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:11:34 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 625)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.6ms | Allocations: 8295)
+
+
+Started GET "/list/new" for ::1 at 2020-02-02 17:11:38 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 442)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.2ms | Allocations: 111)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.2ms | Allocations: 8035)
+
+
+Started POST "/list/create" for ::1 at 2020-02-02 17:11:48 +0900
+Processing by ListController#create as HTML
+  Parameters: {"authenticity_token"=>"stqEmtGYAK//XxTDjWpBZaCbtAt3qVZzu/gSNrQBS2/rqqfodLFuunK7g8u5zIIJxCdGNIHohrVRYZ4p7PQD7Q==", "list"=>{"title"=>"就活"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[36mList Create (1.1ms)[0m  [1m[32mINSERT INTO "lists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "就活"], ["user_id", 2], ["created_at", "2020-02-02 08:11:48.990890"], ["updated_at", "2020-02-02 08:11:48.990890"]]
+  ↳ app/controllers/list_controller.rb:10:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/list_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms | Allocations: 3880)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:11:49 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 8300)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:12:20 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 120)
+Completed 200 OK in 84ms (Views: 48.2ms | ActiveRecord: 1.8ms | Allocations: 8307)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:13:31 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+Completed 200 OK in 92ms (Views: 84.5ms | ActiveRecord: 0.7ms | Allocations: 17751)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:13:52 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.6ms | Allocations: 18178)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:14:39 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.5ms | Allocations: 17757)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:14:59 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 0.7ms | Allocations: 17772)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:15:34 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.6ms | Allocations: 120)
+Completed 200 OK in 158ms (Views: 126.3ms | ActiveRecord: 1.9ms | Allocations: 17761)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:16:20 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 0.6ms | Allocations: 18183)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:16:48 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.5ms | Allocations: 19032)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:17:16 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 0.6ms | Allocations: 19512)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:17:36 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.6ms | Allocations: 18227)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:18:03 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 93ms (Views: 55.6ms | ActiveRecord: 0.6ms | Allocations: 19133)
+
+
+Started GET "/" for ::1 at 2020-02-02 17:18:17 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 638)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 120)
+Completed 200 OK in 69ms (Views: 60.8ms | ActiveRecord: 0.7ms | Allocations: 18665)
+
+
