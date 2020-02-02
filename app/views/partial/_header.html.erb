@@ -2,7 +2,8 @@
     <header class="header">
       <nav class="header_nav">
         <ul class="header_menu">
-          <li class="header_username">〇〇さん</li>
+          <%# Headerにユーザー名を表示する %>
+          <li class="header_username"><%= current_user.name %>さん</li>
           <li class="header_menu_appname"><%= link_to "kanban", root_path, class: "nav-link" %></li>
           <li class="header_function-list-area">
             <ul class="header_function-lists">
