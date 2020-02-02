@@ -5063,3 +5063,148 @@ Processing by TopController#index as HTML
 Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 1.9ms | Allocations: 9537)
 
 
+Started GET "/" for ::1 at 2020-02-02 18:22:26 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.6ms | Allocations: 168)
+Completed 200 OK in 115ms (Views: 31.1ms | ActiveRecord: 2.0ms | Allocations: 8520)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:24:04 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.6ms | Allocations: 168)
+Completed 200 OK in 93ms (Views: 87.5ms | ActiveRecord: 1.3ms | Allocations: 8515)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:39:36 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.9ms | Allocations: 168)
+Completed 200 OK in 101ms (Views: 78.9ms | ActiveRecord: 1.9ms | Allocations: 16310)
+
+
+Started GET "/users/edit.2" for ::1 at 2020-02-02 18:39:38 +0900
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1598)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 173)
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 0.3ms | Allocations: 9311)
+
+
+Started PUT "/users" for ::1 at 2020-02-02 18:39:43 +0900
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"DXnrkyxB5fdVRxBMb3l6lcvBgBZ4bL0ym/XgtL3d4KpamC5zHSPV9vuBEwWUGNEKuiDo3iZm+MJnqHk1jQpVdA==", "user"=>{"name"=>"tes", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 230)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1916)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+Completed 200 OK in 162ms (Views: 16.8ms | ActiveRecord: 0.5ms | Allocations: 13503)
+
+
+Started PUT "/users" for ::1 at 2020-02-02 18:40:01 +0900
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"i3Zjlk5LzUoWiqlN1jJhXZA6l519q7DeCAkd5NyjYGLcl6Z2fyn9S7hMqgQtU8rC4dv/VSOh9S70VIRl7HTVvA==", "user"=>{"name"=>"tes", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 230)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1803)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+Completed 200 OK in 368ms (Views: 23.8ms | ActiveRecord: 0.5ms | Allocations: 11863)
+
+
+Started PUT "/users" for ::1 at 2020-02-02 18:40:38 +0900
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"l4aTlvMF4OFCdCbQ/t9W8yqrsf8C+oaZHBTsiTw4W/XAZ1Z2wmfQ4OyyJZkFvv1sW0rZN1zww2ngSXUIDO/uKw==", "user"=>{"name"=>"tes", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = ?, "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$11$.xfi5LVKNGLVExg8jJ49yu5bj.jdfPJOBmuvFuUz9vLV4R/x4pZq6"], ["name", "tes"], ["updated_at", "2020-02-02 09:40:39.108698"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 293ms (ActiveRecord: 4.0ms | Allocations: 8349)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:40:39 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.7ms | Allocations: 8530)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:41:55 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.5ms | Allocations: 8513)
+
+
+Started GET "/" for ::1 at 2020-02-02 18:43:11 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  Rendered top/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1088)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.4ms | Allocations: 412)
+Completed 200 OK in 47ms (Views: 39.1ms | ActiveRecord: 0.6ms | Allocations: 10416)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCards (20200202101154)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCards (20200202101154)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "cards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) NOT NULL, "memo" text(1000), "list_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cards_on_list_id" ON "cards" ("list_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200202101154"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
