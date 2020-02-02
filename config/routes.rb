@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # Listに関するルーティング
   get 'list/new'
   post 'list/create'
+  # editアクション,update,destroyアクションの生成
+  resources :list, only: %i(new create edit update destroy)
 end
