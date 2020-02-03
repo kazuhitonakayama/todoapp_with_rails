@@ -12,9 +12,18 @@
 }
 .list {
     width: 40%;
+    background-color: lavender;
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding: 10px 0px;
 }
 .list_header {
-    background-color: turquoise;
+    background-color: #007bff;
     width: 90%;
-    margin: 10px auto;
+    margin: 0px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+svg:not(:root).svg-inline--fa {
+    color: #000;
 }

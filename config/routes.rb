@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   get 'list/new'
   post 'list/create'
   # editアクション,update,destroyアクションの生成
-  resources :list, only: %i(new create edit update destroy)
+  resources :list, only: %i(new create edit update destroy) do
+    # ネスト構造にすることで親子関係をルーティングで表すことができる。
+    # cardに関してはlistに対して「子」の関係になるから、ネストすることで、どのリストに紐づくかを明示できる。
+    resources :card, only: %i(new create)
+  end
 end
