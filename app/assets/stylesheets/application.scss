@@ -12,11 +12,20 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
- // header
- // Headerのユーザー名の部分
- .UserName {
-     color: #000;
-     text-decoration: none;
- }
+// header
+// Headerのユーザー名の部分
+* {
+    color: #fff;
+}
+a {
+    color: #fff;
+}
+a.nav-link {
+    color: #fff ;
+}
+.UserName {
+    color: #fff;
+    text-decoration: none;
+}

@@ -5890,3 +5890,519 @@ Processing by TopController#index as HTML
 Completed 200 OK in 97ms (Views: 92.4ms | ActiveRecord: 0.7ms | Allocations: 23210)
 
 
+Started GET "/" for ::1 at 2020-02-03 10:20:56 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (1.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2293)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.7ms | Allocations: 168)
+Completed 200 OK in 110ms (Views: 88.2ms | ActiveRecord: 3.3ms | Allocations: 18876)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:21:26 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 164ms (Views: 158.2ms | ActiveRecord: 1.0ms | Allocations: 18807)
+
+
+Started GET "/list/2/card/new" for ::1 at 2020-02-03 10:22:03 +0900
+Processing by CardController#new as HTML
+  Parameters: {"list_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:5:in `new'
+  Rendering card/new.html.erb within layouts/application
+  Rendered card/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 702)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.5ms | Allocations: 170)
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 0.5ms | Allocations: 8887)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:22:08 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.8ms | Allocations: 168)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 1.6ms | Allocations: 10000)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:23:18 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 81ms (Views: 74.8ms | ActiveRecord: 1.2ms | Allocations: 23873)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:24:45 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.5ms | Allocations: 168)
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 1.0ms | Allocations: 21195)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:26:27 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.5ms | Allocations: 168)
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 0.9ms | Allocations: 22410)
+
+
+Started GET "/" for ::1 at 2020-02-03 10:27:00 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.7ms | Allocations: 168)
+Completed 200 OK in 205ms (Views: 199.0ms | ActiveRecord: 0.9ms | Allocations: 22359)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.debug-b32840192e1816fb07d32e69039a4fdd44341af38306df3b45422c974138d049.css"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (6.0.2.1) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.2.1) lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
+activesupport (6.0.2.1) lib/active_support/logger_silence.rb:36:in `silence'
+activesupport (6.0.2.1) lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-03 10:27:12 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2275)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.6ms | Allocations: 168)
+Completed 200 OK in 106ms (Views: 99.4ms | ActiveRecord: 1.0ms | Allocations: 22410)
+
+
+Started GET "/list/new" for ::1 at 2020-02-03 16:50:42 +0900
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 681)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.6ms | Allocations: 175)
+Completed 200 OK in 175ms (Views: 117.1ms | ActiveRecord: 0.7ms | Allocations: 9617)
+
+
+Started GET "/list/new" for ::1 at 2020-02-03 16:50:43 +0900
+Processing by ListController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering list/new.html.erb within layouts/application
+  Rendered list/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.7ms | Allocations: 170)
+Completed 200 OK in 270ms (Views: 262.1ms | ActiveRecord: 0.1ms | Allocations: 8158)
+
+
+Started POST "/list/create" for ::1 at 2020-02-03 16:50:55 +0900
+Processing by ListController#create as HTML
+  Parameters: {"authenticity_token"=>"Ct3qTwztQGpqcPramsRcag+2QmizYbf3S448NaDAZeVdPC+vPY9wa8S2+ZNhpff1flcqoO1r8ge306W0kBfQOw==", "list"=>{"title"=>"家事"}, "commit"=>"作成"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/list_controller.rb:13:in `create'
+  [1m[36mList Create (6.2ms)[0m  [1m[32mINSERT INTO "lists" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "家事"], ["user_id", 2], ["created_at", "2020-02-03 07:50:55.614376"], ["updated_at", "2020-02-03 07:50:55.614376"]]
+  ↳ app/controllers/list_controller.rb:13:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/list_controller.rb:13:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 8.7ms | Allocations: 4022)
+
+
+Started GET "/" for ::1 at 2020-02-03 16:50:55 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3111)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.5ms | Allocations: 173)
+Completed 200 OK in 69ms (Views: 61.4ms | ActiveRecord: 1.8ms | Allocations: 10886)
+
+
+Started GET "/list/4/card/new" for ::1 at 2020-02-03 16:50:58 +0900
+Processing by CardController#new as HTML
+  Parameters: {"list_id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:5:in `new'
+  Rendering card/new.html.erb within layouts/application
+  Rendered card/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 175)
+Completed 200 OK in 28ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 8946)
+
+
+Started POST "/list/4/card" for ::1 at 2020-02-03 16:51:11 +0900
+Processing by CardController#create as HTML
+  Parameters: {"authenticity_token"=>"+GV1CFy9m1SVlhSHp8CPp30cSyoyi5DT4Jr5fjL/0j500TL80QiiZ+KzUWs4kqmLE9/T5viKa7qX14HXvTh4tg==", "card"=>{"list_id"=>"4", "title"=>"お皿洗い", "memo"=>"お皿洗い"}, "commit"=>"作成する", "list_id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/card_controller.rb:11:in `create'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:11:in `create'
+  [1m[36mCard Create (0.7ms)[0m  [1m[32mINSERT INTO "cards" ("title", "memo", "list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "お皿洗い"], ["memo", "お皿洗い"], ["list_id", 4], ["created_at", "2020-02-03 07:51:11.030822"], ["updated_at", "2020-02-03 07:51:11.030822"]]
+  ↳ app/controllers/card_controller.rb:11:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/card_controller.rb:11:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 3.3ms | Allocations: 4996)
+
+
+Started GET "/" for ::1 at 2020-02-03 16:51:11 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (1.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.3ms | Allocations: 169)
+Completed 200 OK in 50ms (Views: 42.0ms | ActiveRecord: 3.2ms | Allocations: 10878)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:08:38 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 10952)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.5ms | Allocations: 176)
+Completed 200 OK in 163ms (Views: 120.8ms | ActiveRecord: 2.9ms | Allocations: 39047)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:08:56 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.7ms | Allocations: 168)
+Completed 200 OK in 96ms (Views: 89.0ms | ActiveRecord: 1.2ms | Allocations: 22755)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:09:52 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 63.0ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 434ms (Views: 409.2ms | ActiveRecord: 1.6ms | Allocations: 19632)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:11:37 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (1.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3107)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 595d26ef8c4f20c47c07
+Version: webpack 4.41.5
+Time: 5691ms
+Built at: 2020/02/03 17:11:47
+                                        Asset       Size          Chunks                         Chunk Names
+       js/application-10fdf51d3cea696d9a8d.js   2.78 MiB     application  [emitted] [immutable]  application
+   js/application-10fdf51d3cea696d9a8d.js.map   2.98 MiB     application  [emitted] [dev]        application
+    js/js/application-dce3b2cd2e34dc243855.js   3.91 KiB  js/application  [emitted] [immutable]  js/application
+js/js/application-dce3b2cd2e34dc243855.js.map   3.53 KiB  js/application  [emitted] [dev]        js/application
+                                manifest.json  724 bytes                  [emitted]              
+Entrypoint application = js/application-10fdf51d3cea696d9a8d.js js/application-10fdf51d3cea696d9a8d.js.map
+Entrypoint js/application = js/js/application-dce3b2cd2e34dc243855.js js/js/application-dce3b2cd2e34dc243855.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/packs/js/application.js] 0 bytes {js/application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 998 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.4ms | Allocations: 168)
+Completed 200 OK in 10550ms (Views: 10254.3ms | ActiveRecord: 3.0ms | Allocations: 21634)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:14:06 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 3107)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: 28892dae04c03938f2ec
+Version: webpack 4.41.5
+Time: 6758ms
+Built at: 2020/02/03 17:14:16
+                                        Asset       Size          Chunks                         Chunk Names
+       js/application-b58610b4699764358503.js   2.78 MiB     application  [emitted] [immutable]  application
+   js/application-b58610b4699764358503.js.map   2.98 MiB     application  [emitted] [dev]        application
+    js/js/application-dce3b2cd2e34dc243855.js   3.91 KiB  js/application  [emitted] [immutable]  js/application
+js/js/application-dce3b2cd2e34dc243855.js.map   3.53 KiB  js/application  [emitted] [dev]        js/application
+                                manifest.json  724 bytes                  [emitted]              
+Entrypoint application = js/application-b58610b4699764358503.js js/application-b58610b4699764358503.js.map
+Entrypoint js/application = js/js/application-dce3b2cd2e34dc243855.js js/js/application-dce3b2cd2e34dc243855.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/packs/js/application.js] 0 bytes {js/application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 998 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.5ms | Allocations: 168)
+Completed 200 OK in 10395ms (Views: 10361.3ms | ActiveRecord: 2.8ms | Allocations: 12032)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:15:39 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 3107)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/nakayama_kazuhito/Desktop/todoapp_with_rails/public/packs
+[Webpacker] Hash: f30367ad9e5442b80aa2
+Version: webpack 4.41.5
+Time: 5290ms
+Built at: 2020/02/03 17:15:48
+                                        Asset       Size          Chunks                         Chunk Names
+       js/application-a0a8004e5554d32ca508.js   2.78 MiB     application  [emitted] [immutable]  application
+   js/application-a0a8004e5554d32ca508.js.map   2.98 MiB     application  [emitted] [dev]        application
+    js/js/application-dce3b2cd2e34dc243855.js   3.91 KiB  js/application  [emitted] [immutable]  js/application
+js/js/application-dce3b2cd2e34dc243855.js.map   3.53 KiB  js/application  [emitted] [dev]        js/application
+                                manifest.json  724 bytes                  [emitted]              
+Entrypoint application = js/application-a0a8004e5554d32ca508.js js/application-a0a8004e5554d32ca508.js.map
+Entrypoint js/application = js/js/application-dce3b2cd2e34dc243855.js js/js/application-dce3b2cd2e34dc243855.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 852 bytes {application} [built]
+[./app/javascript/packs/js/application.js] 0 bytes {js/application} [built]
+[./app/javascript/src/application.scss] 706 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 998 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 12 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.6ms | Allocations: 168)
+Completed 200 OK in 8976ms (Views: 8968.7ms | ActiveRecord: 1.7ms | Allocations: 12000)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:15:51 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 168)
+Completed 200 OK in 51ms (Views: 43.1ms | ActiveRecord: 2.2ms | Allocations: 10828)
+
+
+Started GET "/" for ::1 at 2020-02-03 17:15:54 +0900
+Processing by TopController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering top/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = ? ORDER BY created_at ASC[0m  [["user_id", 2]]
+  ↳ app/views/top/index.html.erb:4
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 2]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 3]]
+  ↳ app/views/top/index.html.erb:15
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."list_id" = ?[0m  [["list_id", 4]]
+  ↳ app/views/top/index.html.erb:15
+  Rendered top/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3107)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.7ms | Allocations: 168)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 1.3ms | Allocations: 10832)
+
+
