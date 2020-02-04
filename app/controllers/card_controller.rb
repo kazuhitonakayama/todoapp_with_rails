@@ -15,6 +15,11 @@ class CardController < ApplicationController
         end
     end
 
+    # カードの詳細画面への遷移
+    def show
+        @card = Card.find_by(id: params[:id])
+    end
+
     private
         def card_params
             # require:受取るキーの設定

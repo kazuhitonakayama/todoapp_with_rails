@@ -13,12 +13,17 @@
         </div>
         <div class="cardWrapper">
           <% list.cards.each do |card| %>
-            <div class="card">
-              <h3 class="card_title"><%= card.title %></h3>
-              <% if card.memo.size > 0 %>
-                <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
-              <% end %>
-            </div>
+            <%# カード詳細ページというのは、どのリストに紐づいているカードなのかリストの情報が必要 %>
+            <%# 各カードによって違うページを表示する必要があるためカードの情報も必要 %>
+            <%# なのでlist_cardに2つの引数を渡し、どのリストのどのカード詳細ページに遷移するか指定する必要がある %>
+            <%= link_to list_card_path(list, card), class:"cardDetail_link" do %>
+              <div class="card">
+                <h3 class="card_title"><%= card.title %></h3>
+                <% if card.memo.size > 0 %>
+                  <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                <% end %>
+              </div>
+            <% end %>
           <% end %>
           <div class="addCard">
             <i class="far fa-plus-square"></i>
