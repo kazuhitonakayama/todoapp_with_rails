@@ -23,6 +23,47 @@ path {
 }
 
 // -----card詳細表示ページに関する部分-------
+div.container {
+    background: #fff;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.cardContents {
+    width: 45%;
+    position: relative;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 20px 20px;
+}
+// box-shadow:{box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;}
+.cardContents::before,
+.cardContents::after {
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+  content: '';
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 10px 15px rgba(0,0,0,.5);
+}
+.cardContents::before {
+  left: 10px;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.cardContents::after {
+  right: 10px;
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.cardContents_title,
+.cardContents_memo,
+.cardContents_listStatus {
+    margin: 20px 0px;
+}
 .cardContents_title-index {
     color: #000;
     font-weight: bold;
