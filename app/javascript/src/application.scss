@@ -3,47 +3,5 @@
 
 $background_theme: #007bff;
 
-* {
-    padding: 0;
-    margin: 0;
-}
-ul,
-li {
-    list-style: none;
-}
-a {
-    color: #fff;
-}
-a.nav-link {
-    text-decoration: none;
-    color: #fff;
-    padding: 0;
-    padding: 10px 0px 10px 0px;
-}
-.notice,
-.alert {
-    display: none;
-}
+// ここに書かれたスタイルが最優先される
 
-// Header部分始め
-body {
-    header {
-        nav.header_nav {
-            background-color: $background_theme;
-            ul.header_menu {
-                display: flex;
-                justify-content: space-around;
-                li.header_username {
-                    padding: 10px 0px 0px 0px;
-                }
-                li.header_function-list-area {
-                    ul.header_function-lists {
-                        display: flex;
-                        li{
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
