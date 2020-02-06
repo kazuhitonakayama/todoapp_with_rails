@@ -2,16 +2,16 @@
   <div class="container">
     <div class="cardContents">
       <div class="cardContents_title">
-        <div>タイトル</div>
-        <h2><%= @card.title %></h2>
+        <div class="cardContents_title-index">タイトル</div>
+        <div class="cardContents_title-contenttitle"><%= @card.title %></div>
       </div>
       <div class="cardContents_memo">
-        <div>メモ</div>
-        <div><%= @card.memo %></div>
+        <div class="cardContents_memo-index">メモ</div>
+        <div class="cardContents_memo-content"><%= @card.memo %></div>
       </div>
       <div class="cardContents_listStatus">
-        <div>リスト名</div>
-        <div><%= @card.list.title %></div>
+        <div class="cardContents_listStatus-index">リスト名</div>
+        <div class="cardContents_listStatus-listtitle"><%= @card.list.title %></div>
       </div>
     </div>
   </div>

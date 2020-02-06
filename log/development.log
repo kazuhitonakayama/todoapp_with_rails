@@ -7192,3 +7192,68 @@ Processing by TopController#index as HTML
 Completed 200 OK in 80ms (Views: 73.0ms | ActiveRecord: 1.7ms | Allocations: 23286)
 
 
+Started GET "/list/2/card/1" for ::1 at 2020-02-06 23:36:49 +0900
+Processing by CardController#show as HTML
+  Parameters: {"list_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:20:in `show'
+  Rendering card/show.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/card/show.html.erb:14
+  Rendered card/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 703)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 178)
+Completed 200 OK in 137ms (Views: 107.5ms | ActiveRecord: 0.8ms | Allocations: 18655)
+
+
+Started GET "/list/2/card/1" for ::1 at 2020-02-06 23:36:49 +0900
+Processing by CardController#show as HTML
+  Parameters: {"list_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:20:in `show'
+  Rendering card/show.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/card/show.html.erb:14
+  Rendered card/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 688)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 0.4ms | Allocations: 178)
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 1.4ms | Allocations: 8881)
+
+
+Started GET "/list/2/card/1" for ::1 at 2020-02-06 23:45:47 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardController#show as HTML
+  Parameters: {"list_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:20:in `show'
+  Rendering card/show.html.erb within layouts/application
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/card/show.html.erb:14
+  Rendered card/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 856)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 9.7ms | Allocations: 421)
+Completed 200 OK in 133ms (Views: 125.4ms | ActiveRecord: 2.0ms | Allocations: 24792)
+
+
+Started GET "/list/2/card/1" for ::1 at 2020-02-06 23:45:58 +0900
+Processing by CardController#show as HTML
+  Parameters: {"list_id"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/card_controller.rb:20:in `show'
+  Rendering card/show.html.erb within layouts/application
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/card/show.html.erb:14
+  Rendered card/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partial/_header.html.erb (Duration: 1.3ms | Allocations: 421)
+Completed 200 OK in 28ms (Views: 21.5ms | ActiveRecord: 0.5ms | Allocations: 10676)
+
+

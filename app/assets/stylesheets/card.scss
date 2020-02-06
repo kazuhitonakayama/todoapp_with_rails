@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// cardコンポーネントに関する部分
+// --------cardコンポーネントに関する部分-------
 div.card{
     flex-direction: row;
     justify-content: space-between;
@@ -20,4 +20,29 @@ div.card{
 }
 path {
     color: #000;
+}
+
+// -----card詳細表示ページに関する部分-------
+.cardContents_title-index {
+    color: #000;
+    font-weight: bold;
+}
+.cardContents_title-contenttitle {
+    color: #007bff;
+}
+
+.cardContents_memo-index {
+    color: #000;
+    font-weight: bold;
+}
+.cardContents_memo-content {
+    color: #007bff;
+}
+
+.cardContents_listStatus-index {
+    color: #000;
+    font-weight: bold;
+}
+.cardContents_listStatus-listtitle {
+    color: #007bff;
 }
