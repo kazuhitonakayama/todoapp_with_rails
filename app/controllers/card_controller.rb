@@ -1,4 +1,8 @@
 class CardController < ApplicationController
+    # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読む
+    before_action :set_card, only: %i(show edit update)
+
+
     # 新規作成ページに遷移するためのアクション
     def new
         @card = Card.new
@@ -17,7 +21,26 @@ class CardController < ApplicationController
 
     # カードの詳細画面への遷移
     def show
-        @card = Card.find_by(id: params[:id])
+        #　@card = Card.find_by(id: params[:id])の記述が、show,edit,updateメソッドで重複しているので、set_cardに処理をまとめる
+        #@card = Card.find_by(id: params[:id])
+    end
+
+    #　カードの編集画面への遷移
+    #　遷移の過程で、カード情報を取得
+    def edit
+        #　@card = Card.find_by(id: params[:id])の記述が、show,edit,updateメソッドで重複しているので、set_cardに処理をまとめる
+        #@card = Card.find_by(id: params[:id])
+    end
+
+    #　カードの内容を編集し、従前の内容を上書きして更新する
+    def update
+        #　@card = Card.find_by(id: params[:id])の記述が、show,edit,updateメソッドで重複しているので、set_cardに処理をまとめる
+        #@card = Card.find_by(id: params[:id])
+        if @card.update_attributes(card_params)
+          redirect_to :root
+        else
+          render action: :edit
+        end
     end
 
     private
@@ -26,5 +49,10 @@ class CardController < ApplicationController
             # permit:変更を加えられるキーの指定
             # merge:２つのハッシュを統合。誰がリストを作成したかを理解させるため
             params.require(:card).permit(:title,:memo,:list_id)
+        end
+
+        def set_card
+            #　@card = Card.find_by(id: params[:id])の記述が、show,edit,updateメソッドで重複しているので、set_cardに処理をまとめる
+            @card = Card.find_by(id: params[:id])
         end
 end

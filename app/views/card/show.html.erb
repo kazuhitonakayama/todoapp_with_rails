@@ -13,6 +13,12 @@
         <div class="cardContents_listStatus-index">リスト名</div>
         <div class="cardContents_listStatus-listtitle"><%= @card.list.title %></div>
       </div>
+      <div class="cardContents_btnArea">
+        <%# カード編集ページというのは、どのリストに紐づいているカードなのかリストの情報が必要 %>
+        <%# また各カードによって違うページを表示する必要があるためカードの情報も必要 %>
+        <%# なのでedit_list_cardに2つの引数を渡し、どのリストのどのカード編集ページに遷移するか指定する必要がある %>
+        <%= link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
+      </div>
     </div>
   </div>
 </div>
