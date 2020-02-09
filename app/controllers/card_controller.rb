@@ -29,7 +29,9 @@ class CardController < ApplicationController
     #　遷移の過程で、カード情報を取得
     def edit
         #　@card = Card.find_by(id: params[:id])の記述が、show,edit,updateメソッドで重複しているので、set_cardに処理をまとめる
-        #@card = Card.find_by(id: params[:id])
+        #　@card = Card.find_by(id: params[:id])
+        #　ここでログインユーザーの作成したListの情報を取得する
+        @lists = List.where(user: current_user)
     end
 
     #　カードの内容を編集し、従前の内容を上書きして更新する
