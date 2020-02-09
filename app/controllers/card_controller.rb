@@ -1,6 +1,6 @@
 class CardController < ApplicationController
     # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読む
-    before_action :set_card, only: %i(show edit update)
+    before_action :set_card, only: %i(show edit update destroy)
 
 
     # 新規作成ページに遷移するためのアクション
@@ -41,6 +41,11 @@ class CardController < ApplicationController
         else
           render action: :edit
         end
+    end
+
+    def destroy
+        @card.destroy
+        redirect_to :root
     end
 
     private
