@@ -1,7 +1,7 @@
 // Place all the styles related to the card controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+$background_theme: #282828;
 // --------cardコンポーネントに関する部分-------
 div.card{
     flex-direction: row;
@@ -94,5 +94,5 @@ input.submitBtn {
     color: #007bff;
 }
 a.addCard_link {
-    color: #007bff;
+    color: $background_theme;
 }

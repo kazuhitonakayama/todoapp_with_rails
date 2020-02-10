@@ -1,8 +1,7 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-
+$background_theme: #282828;
 // index:List一覧ページのスタイル
 .listWrapper {
     display: flex;
@@ -18,17 +17,17 @@
     padding: 10px 0px;
 }
 .list_header {
-    background-color: #007bff;
+    background-color: $background_theme;
     width: 90%;
     margin: 0px auto;
     border-radius: 5px;
     text-align: center;
 }
 svg:not(:root).svg-inline--fa {
-    color: #000;
+    color: #fff;
 }
-.path {
-    color:#000;
+path {
+    color:$background_theme;
 }
 
 // ---------responsive-----------

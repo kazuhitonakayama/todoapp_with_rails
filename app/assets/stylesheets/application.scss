@@ -15,7 +15,7 @@
 */
 
 // 変数定義
-$background_theme: #007bff;
+$background_theme: #282828;
 
 // 共通コンポーネント
 * {
@@ -35,6 +35,9 @@ a.nav-link {
 ul,
 li {
     list-style: none;
+}
+ul.header_menu {
+    margin-bottom: 0rem;
 }
 
 // エラー文、通知の表示
