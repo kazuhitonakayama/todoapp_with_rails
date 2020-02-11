@@ -16,7 +16,7 @@
 
 // 変数定義
 $background_theme: #282828;
-
+$card_theme: #fff;
 // 共通コンポーネント
 * {
     color: #fff;
@@ -39,7 +39,11 @@ li {
 ul.header_menu {
     margin-bottom: 0rem;
 }
-
+body {
+    background-image: url('desk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 // エラー文、通知の表示
 .notice,
 .alert {

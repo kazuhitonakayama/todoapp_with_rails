@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $background_theme: #282828;
+$card_theme: #fff;
 // --------cardコンポーネントに関する部分-------
 div.card{
     flex-direction: row;
@@ -25,17 +26,28 @@ path {
 // -----card詳細表示ページに関する部分-------
 div.container {
     background: #fff;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: center;
+    padding: 0px;
 }
-
 .cardContents {
-    width: 45%;
+    width: 100%;
     position: relative;
     border: 1px solid #000;
     text-align: center;
     padding: 20px 20px;
+}
+/*
+div.carddetailPage {
+    background-image: url('desk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+*/
+.carddetailPage {
+    padding: 20px 0px;
 }
 // box-shadow:{box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;}
 .cardContents::before,
