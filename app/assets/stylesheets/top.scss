@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $background_theme: #282828;
 // index:List一覧ページのスタイル
+div.topPage {
+    background-image: url('desk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .listWrapper {
     display: flex;
     flex-direction: row;
