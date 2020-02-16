@@ -1,0 +1,49 @@
+/*
+div.topPage {
+    background-image: url('desk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+/* line 14, app/assets/stylesheets/top.scss */
+.listWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* line 20, app/assets/stylesheets/top.scss */
+.list {
+  width: 40%;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 10px;
+  padding: 10px 0px;
+}
+
+/* line 27, app/assets/stylesheets/top.scss */
+.list_header {
+  background-color: #282828;
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* line 34, app/assets/stylesheets/top.scss */
+svg:not(:root).svg-inline--fa {
+  color: #fff;
+}
+
+/* line 37, app/assets/stylesheets/top.scss */
+path {
+  color: #282828;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 43, app/assets/stylesheets/top.scss */
+  .list {
+    width: 80%;
+  }
+}
