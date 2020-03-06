@@ -44,6 +44,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center center;
 }
 // エラー文、通知の表示
 .notice,
@@ -76,4 +77,11 @@ body {
             }
         }
     }
+}
+
+// devise login
+.login-field {
+    text-align: center;
+    width: 50%;
+    margin: auto;
 }
