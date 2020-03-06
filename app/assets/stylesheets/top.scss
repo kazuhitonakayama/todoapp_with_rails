@@ -38,6 +38,13 @@ path {
     color:$background_theme;
 }
 
+// devise login
+.login-field {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
 // ---------responsive-----------
 @media screen and (max-width: 768px) {
     .list {
