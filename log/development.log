@@ -10696,3 +10696,19 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 572ms (Views: 540.2ms | ActiveRecord: 0.9ms | Allocations: 63215)
 
 
+Started GET "/" for ::1 at 2020-03-07 07:44:38 +0900
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 1338)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-07 07:44:38 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 645)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 3042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 234ms (Views: 218.1ms | ActiveRecord: 1.2ms | Allocations: 34320)
+
+
