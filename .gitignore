@@ -2,3 +2,4 @@
 BUNDLE_WITHOUT: "production"
 
 
+# <%= stylesheet_pack_tag 'application' %>
